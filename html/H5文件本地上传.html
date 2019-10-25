@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H5文件本地上传</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    </style>
+</head>
+
+<body>
+    <input type="file" id="file" multiple>
+    <input type="button" value="单击上传图片" id="btn">
+</body>
+<script>
+    var oFile = document.querySelector('#file');
+    var oBtn = document.querySelector('#btn');
+    var fList = [];
+    oFile.addEventListener('change', function () {
+        console.log(oFile.files);
+        //循环选择的文件
+        for (var i = 0; i < oFile.files.length; i++) {
+            //将每次循环的文件保存在file变量里面
+            var file = oFile.files[i];
+            //将每次循环的文件添加到外面定义的空数组里面
+            fList.push(file);
+            //循环每次创建一个文件读取对象
+            var fr = new FileReader();
+            //读取文件的信息
+            fr.readAsDataURL(file);
+            //当文件读取成功，获取文件的信息
+            fr.onload = function () {
+                //当读取完毕之后，通过result属性拿取结果
+                var fs = this.result;
+                //创建一个img对象
+                var img = new Image();
+                //将base64格式的结果值赋给img标签中src属性
+                img.src = fs;
+                img.setAttribute('class', 'fimg');
+                //将img标签渲染到body页面中
+                document.body.appendChild(img);
+            }
+        }
+    })
+    oBtn.addEventListener('click', function () {
+        for (var i = 0; i < oFile.files.length; i++) {
+            var xhr;
+            try {
+                xhr = new XMLHttpRequest();
+            } catch (error) {
+                xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            xhr.open('post', 'http://localhost:8000/myJD/php/post_file.php', true);
+            var fd = new FormData();
+            fd.append('file', fList[i]);
+            xhr.send(fd);
+            xhr.onload = function () {
+                alert('文件上传成功');
+            }
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,1169 @@
+/* 全局样式 */
+/* *{
+	margin: 0;
+	padding: 0;
+} */
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+li,
+p,
+span,
+img,
+a,
+del,
+strong,
+i,
+input,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.clearfix {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.lunbo-num span.active {
+	background: red;
+}
+
+/* 京东顶端背景图片 */
+#guanggao-bg {
+	background: rgb(0, 106, 90);
+	position: relative;
+}
+
+#guanggao-bg .guanggao {
+	width: 100%;
+	height: 80px;
+	background: url('../images/guanggao.jpg') no-repeat center;
+}
+
+#guanggao-bg .xx {
+	width: 20px;
+	height: 20px;
+	background: #2d2d2d;
+	text-align: center;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 1290px;
+	cursor: pointer;
+	color: white;
+}
+
+/* 京东头部 */
+#top-big {
+	width: 100%;
+	height: 32px;
+	background: #e3e4e5;
+}
+
+.jd-top {
+	width: 1193px;
+	height: 100%;
+	/* border:1px solid red; */
+	box-sizing: border-box;
+	position: relative;
+	font-size: 12px;
+	/* overflow: hidden; */
+	display: flex;
+	margin: 0 auto;
+	line-height: 32px;
+}
+
+.jd-top li {
+	color: #ccc;
+}
+
+.jd-top a,
+.jd-top .city {
+	color: #bcbcbd;
+}
+
+.jd-top .a-hover:hover {
+	color: #f10215;
+}
+
+.jd-top .a-red {
+	color: #f10215;
+}
+
+.jd-top-info {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.jd-top .jd-top-list li {
+	margin-left: 15px;
+}
+
+.jd-top-list {
+	display: flex;
+}
+
+.caiGou {
+	width: 150px;
+	height: 80px;
+	background: white;
+	position: absolute;
+	top: 31px;
+	left: 410px;
+	z-index: 99999;
+	display: none;
+	box-shadow: 1px 1px #bcbcbd;
+	border-left: 1px solid #bcbcbd;
+}
+
+.caiGou ul {
+	display: flex;
+}
+
+.caiGou ul li {
+	margin-left: 15px;
+}
+
+#xianShi .block {
+	display: block;
+}
+
+.fuWu {
+	width: 160px;
+	height: 250px;
+	background: white;
+	position: absolute;
+	left: 410px;
+	display: none;
+	z-index: 99999;
+	box-shadow: 1px 1px #bcbcbd;
+	border-left: 1px solid #bcbcbd;
+}
+
+.fuWu ul {
+	display: flex;
+}
+
+.daoHang {
+	width: 1193px;
+	height: 200px;
+	background: white;
+	position: absolute;
+	left: -467px;
+	z-index: 99999;
+	display: none;
+	box-shadow: 1px 1px #bcbcbd;
+	border-left: 1px solid #bcbcbd;
+}
+
+.daoHang ul {
+	display: flex;
+}
+
+.city-none {
+	width: 350px;
+	height: 200px;
+	background: white;
+	position: absolute;
+	left: 0;
+	top: 31px;
+	z-index: 99999;
+	display: none;
+	box-shadow: 1px 1px #bcbcbd;
+	border-left: 1px solid #bcbcbd;
+}
+.city-none ul {
+	display: flex;
+}
+.city-none ul li {
+	margin-left: 20px;
+}
+
+/* 京东搜索栏目 */
+#jd-search {
+	width: 1193px;
+	height: 142px;
+	/* border: 1px solid red; */
+	box-sizing: border-box;
+	margin: 0 auto;
+	position: relative;
+}
+
+#jd-search .jd-logo img {
+	width: 163px;
+	height: 120px;
+}
+
+#jd-search input {
+	width: 488px;
+	height: 32px;
+	position: absolute;
+	top: 25px;
+	left: 260px;
+	border: none;
+	border: 2px solid red;
+	text-indent: 16px;
+	font-size: 12px '宋体';
+	outline: none;
+}
+
+#jd-search .search-ico {
+	position: absolute;
+	top: 25px;
+	left: 750px;
+}
+
+.shop-car {
+	position: absolute;
+	top: 25px;
+	left: 830px;
+}
+
+.erweima {
+	position: absolute;
+	top: 2px;
+	right: 0px;
+}
+
+.info-list {
+	display: flex;
+	position: absolute;
+	top: 65px;
+	left: 260px;
+}
+
+.info-list li a {
+	font: 12px '微软雅黑';
+	color: #999;
+	margin-right: 10px;
+}
+
+.info-list li a:hover {
+	color: #e1251b;
+}
+
+.info-list li .a-red {
+	color: #e1251b;
+}
+
+.nav-list li .a-red {
+	color: #e1251b;
+	font-weight: bold;
+}
+
+.nav-list {
+	display: flex;
+	position: absolute;
+	top: 112px;
+	left: 215px;
+}
+
+.nav-list li a {
+	font: 15px "微软雅黑";
+	font-weight: 500;
+	margin-right: 20px;
+	color: #333;
+}
+
+.nav-list li a:hover {
+	color: #e1251b;
+}
+
+.jd-jinRong {
+	width: 62px;
+	height: 150px;
+	background: white;
+	position: absolute;
+	top: 30px;
+	left: 653px;
+	z-index: 99999;
+	display: none;
+	box-shadow: 1px 1px #bcbcbd;
+	border-left: 1px solid #bcbcbd;
+	text-align: center;
+}
+
+/* 商品信息栏目 */
+#goods-bg {
+	width: 100%;
+	height: 100%;
+	background: #f4f4f4;
+	overflow: hidden;
+	position: relative;
+}
+
+#goods-bg .goods-bg-img {
+	background: url(https://img10.360buyimg.com/img/jfs/t1/68762/7/9454/670527/5d72754dE3c2b21ec/bb5d6ee78d851362.png.webp)
+		no-repeat;
+	background-position-x: 50%;
+	background-position-y: 0;
+}
+
+#goods-item {
+	width: 1193px;
+	height: 470px;
+	/* border: 1px solid blue; */
+	box-sizing: border-box;
+	margin: 10px auto 0;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+/* 商品信息栏目的左侧边栏 */
+.goods-left {
+	width: 190px;
+	height: 100%;
+	/* border: 1px solid red; */
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.goods-left ul {
+	margin-top: 8px;
+	line-height: 25px;
+	text-indent: 16px;
+}
+
+.goods-left ul li a {
+	font: 14px "微软雅黑";
+	color: #636363;
+}
+
+.goods-left ul li:hover {
+	background: #ccc;
+}
+
+.goods-left ul li a:hover {
+	color: #db0f26;
+}
+
+.goods-left ul li span {
+	font: 14px "微软雅黑";
+	color: #636363;
+	margin: 0 2px;
+}
+
+.div-none {
+	width: 1003px;
+	height: 100%;
+	background: white;
+	position: absolute;
+	left: 190px;
+	top: 0;
+	display: none;
+	z-index: 99999;
+	box-shadow: 2px 2px 10px #e3e4e5;
+	font-size: 14px;
+	font-family: '微软雅黑';
+	color: #636363;
+}
+
+.div-none ul {
+	display: flex;
+	line-height: 50px;
+}
+
+/* 商品信息栏目的轮播图 */
+.goods-lunbo {
+	width: 590px;
+	height: 100%;
+	/* border: 1px solid green; */
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+}
+
+.goods-lunbo img {
+	width: 100%;
+	height: 100%;
+}
+
+.lunbo-list {
+	width: 800%;
+}
+
+.goods-lunbo .lunbo-list li {
+	float: left;
+}
+
+.goods-lunbo .gt,
+.lt {
+	width: 25px;
+	height: 35px;
+	/* border:1px solid yellow; */
+	position: absolute;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+	box-sizing: border-box;
+	background: rgb(0, 0, 0, 1.5);
+}
+
+.goods-lunbo .gt {
+	top: 50%;
+	right: 0;
+	margin-top: -17.5px;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	cursor: pointer;
+}
+
+.goods-lunbo .lt {
+	/* border:1px solid red; */
+	top: 50%;
+	left: 0;
+	margin-top: -17.5px;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	cursor: pointer;
+}
+
+.goods-lunbo .gt:hover,
+.lt:hover {
+	background: rgb(0, 0, 0, 0.5);
+}
+
+.lunbo-num {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	margin-left: -77px;
+}
+
+.lunbo-num span {
+	background: #fff;
+	color: 12px "微软雅黑";
+	color: #bcbcbd;
+	display: inline-block;
+	width: 15px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+/* .lunbo-num span:hover{
+	background: rgb(252, 196, 213);
+} */
+
+/* 商品信息栏目的图片 */
+.goods-img {
+	width: 190px;
+	height: 100%;
+	/* border: 1px solid peru; */
+	box-sizing: border-box;
+}
+
+.goods-img ul li {
+	margin-bottom: 3px;
+}
+
+.goods-img ul li:hover {
+	opacity: 0.5;
+}
+
+/* 个人信息的登录 */
+.goods-login {
+	width: 190px;
+	height: 100%;
+	/* border: 1px solid yellow; */
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.goods-login .jd-dog {
+	margin: 15px 0 0 20px;
+	float: left;
+}
+
+.goods-login .jd-dog img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+.login-title a {
+	font: 12px '微软雅黑';
+	color: #636363;
+}
+
+.goods-login a:hover {
+	color: #db0f26;
+}
+
+.login-title {
+	margin: 15px 0 0 15px;
+	float: left;
+}
+
+.login-title span {
+	font-size: 12px;
+}
+
+.login-btn {
+	display: flex;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.goods-login .login-btn a {
+	font: 12px "微软雅黑";
+	color: #fff;
+	display: block;
+	width: 70px;
+	height: 25px;
+	border-radius: 13px;
+	text-align: center;
+	line-height: 25px;
+	margin-right: 10px;
+}
+
+.btn-red {
+	background: #e1251b;
+}
+
+.goods-login .login-btn .btn-black {
+	background: #363634;
+	color: #e5d790;
+}
+
+.login-btn .btn-red:hover {
+	background: darkred;
+}
+
+.login-btn .btn-black:hover {
+	background: darkred;
+}
+
+.login-line {
+	width: 120px;
+	height: 0;
+	border: 1px solid #eee;
+	margin: 10px 0 0 30px;
+}
+
+.jd-h1 {
+	margin-top: 10px;
+}
+
+.goods-login .jd-h1 .jd-title {
+	font: 14px '微软雅黑';
+	color: #333;
+	font-weight: 600;
+	margin-left: 16px;
+}
+
+.jd-h1 .jd-more {
+	font: 12px "微软雅黑";
+	color: #999;
+	margin-left: 60px;
+}
+
+.jd-news {
+	text-indent: 16px;
+	margin-top: 10px;
+}
+
+.jd-news a {
+	font: 12px "微软雅黑";
+	color: #878787;
+}
+
+.jd-news a span {
+	display: inline-block;
+	background: #fceeed;
+	padding: 0 5px;
+	text-indent: -0.1px;
+	color: #e1251b;
+	margin-right: 5px;
+	margin-bottom: 2px;
+}
+
+.info-ico {
+	width: 100%;
+}
+
+.info-ico img {
+	width: 28px;
+	height: 28px;
+}
+
+.info-ico ul li {
+	float: left;
+	margin: 15px 0 0 25px;
+}
+
+/* 京东秒杀 */
+#jd-miaosha {
+	width: 1193px;
+	height: 260px;
+	/* border: 1px solid red; */
+	margin: 0 auto;
+	box-sizing: border-box;
+	margin-top: 30px;
+	background: #fff;
+}
+
+.miaosha-left {
+	width: 190px;
+	height: 100%;
+	/* border: 1px solid blue; */
+	box-sizing: border-box;
+	background: #e83632;
+	float: left;
+}
+
+.miaosha-left img {
+	display: block;
+	margin: 20px auto 0;
+}
+
+.miaosha-left h2 {
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 40px;
+	letter-spacing: 1px;
+}
+
+.p-time {
+	color: #fff;
+	font: 14px "微软雅黑";
+	margin-top: 20px;
+	text-align: center;
+}
+
+.p-time strong {
+	font-weight: normal;
+	font: 18px "微软雅黑";
+}
+
+.div-time {
+	margin: 15px 0 0 30px;
+}
+
+.div-time .span-time {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: #000;
+	color: #fff;
+	font: 20px "微软雅黑";
+	text-align: center;
+}
+
+.div-time .span-maohao {
+	color: #fff;
+	margin: 0 2px;
+}
+
+.miaosha-list li {
+	float: left;
+	width: 200px;
+	height: 260px;
+	text-align: center;
+}
+
+.miaosha-list li img {
+	display: block;
+	margin: 30px auto 15px;
+}
+
+/* .miaosha-list li:hover {
+	opacity: 0.8;
+} */
+
+.miaosha-list p a {
+	color: #636363;
+	font: 12px "微软雅黑";
+}
+
+.miaosha-list {
+	overflow: hidden;
+}
+
+.miaosha-list li span {
+	margin: 5px 0 0 25px;
+	display: block;
+	width: 92px;
+	height: 22px;
+	border: 1px solid red;
+	background: #db0f26;
+	color: #fff;
+	float: left;
+	font: 15px "宋体";
+	box-sizing: border-box;
+}
+
+.miaosha-list li del {
+	display: block;
+	margin-top: 5px;
+	color: #999;
+	background: #fff;
+	width: 66px;
+	height: 22px;
+	float: left;
+	font: 12px "微软雅黑";
+	border: 1px solid #db0f26;
+	line-height: 22px;
+	box-sizing: border-box;
+}
+
+/* 京东排行榜和品牌闪购的总内容 */
+
+/* 京东排行榜靠左边部分 */
+
+#jd-msg {
+	width: 1193px;
+	height: 340px;
+	/* border: 1px solid blue; */
+	margin: 0 auto;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.rank-left {
+	width: 590px;
+	height: 100%;
+}
+
+/* 京东排行榜的标题 */
+
+.rank-title {
+	width: 100%;
+	height: 60px;
+	/* border: 1px solid red; */
+	display: flex;
+	box-sizing: border-box;
+}
+
+.rank-title h2 {
+	line-height: 60px;
+	margin-left: 20px;
+}
+
+.rank-title h2 a {
+	color: #333;
+}
+
+/* 排行中的热卖部分 */
+
+.rank-list {
+	line-height: 60px;
+	margin-left: 135px;
+}
+
+.rank-list li {
+	float: left;
+	margin-right: 20px;
+}
+
+.rank-list li a {
+	font: 15px "微软雅黑";
+	color: #999;
+}
+
+.rank-list li a:hover {
+	color: #e1251b;
+	font-weight: bold;
+}
+
+.rank-list li .a-red {
+	color: #e1251b;
+	font-weight: bold;
+}
+
+.hot-main {
+	display: flex;
+	width: 590px;
+	height: 280px;
+}
+
+.hot-buy {
+	width: 270px;
+	height: 180px;
+	/* border:1px solid yellow;	 */
+	background: rgb(247, 248, 249);
+	position: relative;
+	margin-left: 20px;
+}
+
+.hot-buy > img {
+	margin: 25px 0 0 80px;
+}
+
+.hot-buy .hot-img img {
+	position: absolute;
+	top: 0;
+	left: 20px;
+}
+
+.hot-buy p {
+	text-align: center;
+}
+
+.hot-buy p a {
+	font: 14px "微软雅黑";
+	color: #333;
+}
+
+.hot-main a:hover {
+	color: #db0f26;
+}
+
+#jd-msg img:hover {
+	opacity: 0.7;
+}
+
+.rank-a {
+	margin-top: 25px;
+}
+
+.rank-a a {
+	display: inline-block;
+	background: rgb(247, 248, 249);
+	margin-bottom: 2px;
+	font: 15px "微软雅黑";
+	color: #333;
+	padding: 10px 42.5px;
+	margin-right: 2.5px;
+}
+
+/* 热卖商品信息的部分 */
+.hot-msg {
+	width: 270px;
+	height: 255px;
+	/* border: 1px solid darkviolet; */
+	box-sizing: border-box;
+	margin: 0 20px 0;
+}
+
+.msg-list li {
+	width: 100%;
+	height: 70px;
+	margin-top: 15px;
+}
+
+.msg-list li .img-drink {
+	vertical-align: middle;
+}
+
+.msg-list li a {
+	font: 12px "微软雅黑";
+	color: #333;
+}
+
+/* 京东品牌闪购 */
+.brand-right {
+	width: 590px;
+	height: 100%;
+	/* border: 1px solid green; */
+	box-sizing: border-box;
+}
+
+.brand-title {
+	width: 590px;
+	height: 60px;
+	/* border: 1px solid darkorange; */
+	box-sizing: border-box;
+}
+
+.brand-title h2 {
+	line-height: 60px;
+	margin-left: 20px;
+}
+
+.brand-goods {
+	width: 100%;
+	height: 265px;
+	/* border: 1px solid red; */
+	box-sizing: border-box;
+	display: flex;
+}
+
+.brand-goods .goods-fl {
+	width: 270px;
+	height: 265px;
+	/* border:1px solid darkorange; */
+	box-sizing: border-box;
+	background: rgb(248, 247, 246);
+	text-align: center;
+	margin-left: 20px;
+}
+
+.goods-fl .fl-list {
+	margin-top: 20px;
+}
+
+.goods-fl .fl-list h6 {
+	font: 16px "微软雅黑";
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.goods-fl .fl-list a {
+	font: 12px "微软雅黑";
+	color: #666;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.brand-goods .goods-fr {
+	width: 270px;
+	height: 265px;
+	/* border: 1px solid darkblue; */
+	box-sizing: border-box;
+	margin-left: 20px;
+}
+
+.fl-list li .lu {
+	width: 75px;
+	height: 35px;
+	margin-bottom: 15px;
+}
+
+.fl-list li .mianbei {
+	width: 130px;
+	height: 130px;
+}
+
+.goods-fr img {
+	width: 100px;
+	height: 50px;
+	margin: 15px 15px;
+}
+
+/* 京东的底部 */
+#jd-footer {
+	width: 100%;
+	height: 568px;
+	/* border: 1px solid red; */
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+
+/* 京东的多快好省 */
+.jd-bot {
+	width: 1193px;
+	height: 42px;
+	/* border:1px solid blue; */
+	box-sizing: border-box;
+	margin: 30px auto 0;
+}
+
+.bot-list {
+	display: flex;
+	justify-content: space-around;
+	line-height: 42px;
+}
+
+.bot-list-duo h5,
+.bot-list-kuai h5,
+.bot-list-hao h5,
+.bot-list-sheng h5 {
+	color: #db0f26;
+	font: 22px "微软雅黑";
+	font-weight: bold;
+	display: inline;
+	border: 2px solid #db0f26;
+	box-sizing: border-box;
+}
+
+.bot-list span {
+	font: 18px "微软雅黑";
+	font-weight: bold;
+	color: #444;
+}
+
+/* 分割线 */
+.jd-bot-border {
+	width: 100%;
+	height: 0;
+	border: 0.3px solid #ccc;
+	margin-top: 30px;
+}
+
+/* 京东的售后服务 */
+.jd-service {
+	width: 1193px;
+	height: 160px;
+	/* border:1px solid blue; */
+	box-sizing: border-box;
+	margin: 20px auto 0;
+}
+
+.service-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.service-list h5 {
+	font: 14px '微软雅黑';
+	color: #666;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.service-list a,
+.service-list p {
+	font: 12px '微软雅黑';
+	color: #666;
+}
+
+.service-list .h5-bot {
+	margin-bottom: 20px;
+}
+
+.service-list p {
+	line-height: 18px;
+}
+
+.service-list a:hover {
+	color: #db0f26;
+}
+
+.service-list .a-right {
+	margin-left: 100px;
+}
+
+/* 分割线 */
+.service-border {
+	width: 1193px;
+	height: 0;
+	border: 0.5px solid #ccc;
+	margin: 15px auto 0;
+}
+
+/* 京东的企业简介 */
+.jd-intro {
+	width: 1193px;
+	margin: 20px auto 0;
+	line-height: 12px;
+}
+
+.intro-list {
+	display: flex;
+	margin-left: 60px;
+}
+
+.intro-list span {
+	margin: 0 10px;
+	color: #ccc;
+	font: 12px "微软雅黑";
+}
+
+.intro-list li a {
+	font: 12px "微软雅黑";
+	color: #666;
+}
+
+.intro-list li a:hover {
+	color: #db0f26;
+}
+
+/* 京东的营业执照 */
+.jd-license {
+	width: 1193px;
+	height: 130px;
+	margin: 10px auto 0;
+	/* border: 1px solid blue; */
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 28px;
+}
+
+.jd-license p a,
+.jd-license p span {
+	font: 12px "微软雅黑";
+	color: #999;
+}
+
+.jd-license p span {
+	margin: 0 5px;
+}
+
+.jd-license p a:hover {
+	color: #db0f26;
+}
+
+/* 京东的名誉评价 */
+.jd-evaluate {
+	width: 1193px;
+	/* border:1px solid red; */
+	box-sizing: border-box;
+	margin: 35px auto 0;
+}
+
+.evaluate-list {
+	display: flex;
+	margin-left: 330px;
+}
+
+.evaluate-list li {
+	margin-right: 5px;
+}
+
+/* 京东的固定侧边栏 */
+#jd-aside {
+	width: 60px;
+	/* border: 1px solid red; */
+	box-sizing: border-box;
+	text-align: center;
+	background: #fff;
+	position: absolute;
+	top: 510px;
+	right: 40px;
+}
+
+.aside-list {
+	line-height: 60px;
+}
+
+.aside-list li {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+}
+
+.aside-list li a {
+	font: 14px "微软雅黑";
+	color: #333;
+	display: inline-block;
+	padding: 0 15px;
+	vertical-align: middle;
+}
+
+.aside-list li:hover {
+	background: rgb(200, 22, 35);
+}
+
+.aside-list li a:hover {
+	color: #fff;
+}

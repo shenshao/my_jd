@@ -1,0 +1,46 @@
+/* 全局样式 */
+/* *{
+	margin: 0;
+	padding: 0;
+} */
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+li,
+p,
+span,
+img,
+a,
+del,
+strong,
+i,
+input,
+body {
+	margin: 0;
+    padding: 0;
+}
+
+body{
+    background: deeppink;
+}
+
+#wrap {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+#oUl {
+    list-style: none;
+    border: 2px solid black;
+}

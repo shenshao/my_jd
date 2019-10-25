@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手风琴效果</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        main section {
+            width: 100%;
+        }
+
+        main section div {
+            height: 0;
+            background: gray;
+            transition: all 0.3s linear;
+        }
+
+        main section h3 {
+            height: 30px;
+            text-indent: 1em;
+            line-height: 30px;
+            color: white;
+            font-size: 16px;
+            font-family: '微软雅黑';
+            background: greenyellow;
+            transition: all 2s linear;
+        }
+
+        main section:hover h3 {
+            background: deeppink;
+        }
+
+        main section:hover div {
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h3>商品列表</h3>
+            <div></div>
+        </section>
+        <section>
+            <h3>新闻信息</h3>
+            <div></div>
+        </section>
+        <section>
+            <h3>价格对比</h3>
+            <div></div>
+        </section>
+        <section>
+            <h3>回馈建议</h3>
+            <div></div>
+        </section>
+        <section>
+            <h3>用户频道</h3>
+            <div></div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东人员查询</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <input id="text" type="text">
+        <input id="query" type="button" value="查询">
+        <h2>人员资料查询表</h2>
+        <ul id="oUl"></ul>
+    </div>
+</body>
+<script src="../js/jd.js"></script>
+<script>
+var oTxt = document.getElementById('text');
+var oBtn = document.getElementById('query');
+var oUl = document.getElementById('oUl');
+oBtn.onclick = function (data) {
+    var user = oTxt.value;
+    var url = '../php/person.php';
+    ajax('get', url, 'user=' + user, function (data) {
+        data = JSON.parse(data);
+        var msg = {
+            "name": "姓名",
+            "age": "年龄",
+            "hobby": "爱好",
+            "info": "简介"
+        };
+        var str = '';
+        if (data.code) {
+            str += '<li style="color:white;"><strong>姓名:</strong>  <span>' + user + '：' + data.data + '</span> </li>'
+        } else {
+            for (var k in data.data) {
+                str += "<li style='color:yellowgreen;'><strong>" + msg[k] + ":</strong> <span>" + data.data[k] + "</span> </li>"
+            }
+        }
+        oUl.innerHTML = str;
+    });
+}
+</script>
+</html>

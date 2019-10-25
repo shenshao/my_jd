@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 外部样式 -->
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+        
+        form {
+            padding: 30px 0;
+        }
+        
+        .well {
+            padding-bottom: 30px;
+        }
+        
+        .t {
+            float: right;
+        }
+        
+        dd.text {
+            text-indent: 2em;
+        }
+    </style>
+    <title>用户留言系统</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">用户留言系统 </a>
+            <ul class="nav navbar-nav hidden-xs">
+                <li>
+                    <a href="#"> <i class="glyphicon glyphicon-home"></i> 首页</a>
+                </li>
+                <li>
+                    <a href="#"> <i class="glyphicon glyphicon-user"></i> 社交</a>
+                </li>
+                <li class="active">
+                    <a href="#"> <i class="glyphicon glyphicon-pencil"></i> 留言</a>
+                </li>
+                <li>
+                    <a href="#"> <i class="glyphicon glyphicon-hand-right"></i> 关于</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col-md-8">
+            <div class="page-header">
+                <h3>大家的留言</h3>
+            </div>
+            <div id="list">
+
+                <!-- <dl class="well">
+                    <dt>
+                        <strong>ZaG</strong> 说 :
+                    </dt>
+                    <dd class='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum at temporibus tempora accusamus veritatis, eos tenetur quos facilis maxime, nam similique incidunt harum ea dolorum ad pariatur non dolore omnis!</dd>
+                    <dd class="t">
+                        <a href="javascript:;" class="support">顶(<span>0</span>)</a> |
+                        <a href="javascript:;" class="oppose">踩(<span>0</span>)</a>
+                    </dd>
+                </dl> -->
+
+            </div>
+            <div id="showMore" style="display: block;text-align:center;margin-bottom:30px;"><a href="#" class="btn btn-primary">显示更多...</a></div>
+        </div>
+
+        <div id="sidebar" class="col-md-4">
+
+            <div id="user" style="display: none;">
+                <h4><span id="userinfo"></span> <a href="javascript:;" id="logout">退出</a></h4>
+            </div>
+
+            <!-- 注册 -->
+            <form id="reg" class="well">
+                <div class="form-group form-inline">
+                    <label for="user" stype="display:inline;">注册账户：</label>
+                    <input type="text" class="form-control" id="username1" name="username1" autocomplete="off" />
+                    <label for="user"><span id="verifyUserNameMsg"></span></label>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="password" style="display:inline;">注册密码：</label>
+                    <input type="password" class="form-control" id="password" name="password" autocomplete="off" />
+                </div>
+                <button type="button" id="btnReg" class="btn btn-primary">注册</button>
+            </form>
+            <!-- 登陆 -->
+            <form id="login" class="well">
+                <div class="form-group form-inline">
+                    <label for="user" stype="display:inline;">登陆账户：</label>
+                    <input type="text" class="form-control" id="username2" name="username2" autocomplete="off" />
+                </div>
+                <div class="form-group form-inline">
+                    <label for="password" style="display:inline;">登陆密码：</label>
+                    <input type="password" class="form-control" id="password2" name="password2" autocomplete="off" />
+                </div>
+                <button type="button" class="btn btn-primary" id="btnLogin">登陆</button>
+            </form>
+
+            <!-- 留言发表 -->
+            <form id="sendBox" class="well">
+                <h4>发表留言</h4>
+                <div class="form-group">
+                    <textarea id="content" class="form-control" rows="5"></textarea>
+                </div>
+                <input type="button" value="提交" class="btn btn-primary" id="btnPost" />
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+<!-- json2 可以支持IE6 7 实现 JSON对象 它提供两个方法 JSON.stringify() JSON.parse() -->
+<script src="../js/json2.js"></script>
+<!-- 这个工具文件中 ajax $-->
+<script src="../js/myTool.js"></script>
+<!-- 引入首页的功能js -->
+<script src="../js/regist.js"></script>
+
+</html>

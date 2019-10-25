@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        ul {
+            width: 1088px;
+            margin: 0 auto;
+        }
+
+        ul li {
+            list-style: none;
+            width: 252px;
+            margin: 10px;
+            float: left;
+        }
+
+        ul li div {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px yellow;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+<script>
+    var page = 0;
+    var onOff = true;
+    getImg();
+    function getImg() {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:8000/myJD/php/getPics.php",
+            data: {
+                num: page
+            },
+            dataType: "json",
+            success: function (data) {
+                if (!data.length) return;
+                for (var i = 0; i < data.length; i++) {
+                    var $img = $('<img height=' + data[i].height + 'src=' + data[i].img + '>');
+                    var $p = $('<p' + data[i].title + '></p>');
+                    var $div = $('<div></div>');
+                    var short = getShort().i;
+                    $('ul li').eq(short).append($div);
+                }
+            }
+        })
+    }
+    $(window).scroll(function () {
+        var wit = $(window).innerHeight();
+        var wis = $(document).scrollTop();
+        var lih = getShort().short;
+        var lit = $('ul li').eq(getShort().i).offset().top;
+        if (wit + wis > lih + lit) {
+            if (onOff) {
+                onOff = false;
+                page++;
+                getImg();
+            }
+        }
+    })
+    function getShort() {
+        var shortI = $('ul li').eq(0).outerHeight();
+        var index = 0;
+        $('ul li').each(function (i, item, ) {
+            if (shortI > $(item).outerHeight()) {
+                shortI = $(item).outerHeight();
+                index = i;
+            }
+        })
+        return {
+            short: shortI,
+            i: index
+        }
+    }
+</script>
+
+</html>

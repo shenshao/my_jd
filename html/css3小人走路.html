@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3走路动画</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <style>
+        #person {
+            width: 180px;
+            height: 300px;
+            position: absolute;
+            left: 710px;
+            top: 50px;
+            background: url(../images/charector.png) no-repeat;
+            transition: all 5s linear;
+        }
+
+        section {
+            width: 780px;
+            height: 336px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: url(../images/bg.jpeg) no-repeat;
+            overflow: hidden;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <button id='btn'>开始走路</button>
+
+    <section>
+        <div id="person"></div>
+    </section>
+</body>
+<script>
+    var oBtn = document.getElementById('btn');
+    var oP = document.getElementById('person');
+    oBtn.addEventListener('click', function () {
+        var str = '@keyframes move{';
+        for (var i = 0; i < 7; i++) {
+            str += `
+                ${100 / 6 * i}%{
+                    background-position-x:${-180 * i}px;
+                }
+            `;
+        }
+        str += '}';
+        document.querySelector('head>style').innerHTML += str;
+        oP.style.animation = 'move 1s steps(1) infinite';
+        oP.style.left = '-150px';
+        oP.addEventListener('transitionend', function () {
+            oP.style.animationPlayState = 'paused';
+        })
+    })
+</script>
+
+</html>

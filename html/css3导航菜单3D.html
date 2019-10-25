@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3导航菜单3D翻转</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 420px;
+            margin: 100px auto;
+
+        }
+
+        ul li {
+            float: left;
+            list-style: none;
+            width: 60px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: chocolate;
+            color: white;
+            font-size: 15px;
+            font-weight: 900;
+            position: relative;
+            transition: all 0.5s linear;
+            /* perspective:500px; */
+            transform-style: preserve-3d;
+        }
+
+        ul li span {
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        ul li span:nth-child(1) {
+            background: blue;
+            color: black;
+            transform: rotateX(-90deg) translateZ(20px);
+        }
+
+        ul li span:nth-child(2) {
+            transform: translateZ(20px);
+        }
+
+        ul li:hover {
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><span>Index</span><span>首页</span></li>
+        <li><span>News</span><span>新闻</span></li>
+        <li><span>Name</span><span>姓名</span></li>
+        <li><span>Gender</span><span>性别</span></li>
+        <li><span>Age</span><span>年龄</span></li>
+        <li><span>IdCard</span><span>身份证</span></li>
+        <li><span>Address</span><span>地址</span></li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H5选项卡</title>
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+    <style type="text/css">
+        ol li {
+            list-style: none;
+            font: 12px/30px "微软雅黑";
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            padding: 2px 10px;
+            background-color: pink;
+        }
+
+        section {
+            display: none;
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        nav>a.active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="javascript:;" data-cont="local">国内</a>
+            <a href="javascript:;" data-cont="global">国际</a>
+            <a href="javascript:;" data-cont="sport">体育</a>
+            <a href="javascript:;" data-cont="tech">科技</a>
+        </nav>
+        <section id="local">
+            <ol>
+                <li>河感在生矿难，死伤在全10</li>
+                <li>禽流感在感在广1处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广在全国暴发</li>
+                <li>禽流感在全国多处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广东群体性暴发</li>
+            </ol>
+        </section>
+        <section id="global">
+            <ol>
+                <li>猪流感在广在全国暴发</li>
+                <li>禽流感在全国多处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广东群体性暴发</li>
+                <li>河感在生矿难，死伤在全10</li>
+                <li>禽流感在感在广1处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+            </ol>
+        </section>
+        <section id="sport">
+            <ol>
+                <li>哈哈哈，死伤在全10</li>
+                <li>禽流感在感在广1处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广在全国暴发</li>
+                <li>禽流感在全国多处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广东群体性暴发</li>
+            </ol>
+        </section>
+        <section id="tech">
+            <ol>
+                <li>xixixixixi，死伤在全10</li>
+                <li>禽流感在感在广1处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广在全国暴发</li>
+                <li>禽流感在全国多处继续蔓延，温家宝指示</li>
+                <li>南方大旱，农作物减产绝收面积上亩</li>
+                <li>猪流感在广东群体性暴发</li>
+            </ol>
+        </section>
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        var aList = document.querySelectorAll('nav>a'), secList;
+        (function (index) {
+            for (var i = 0; i < aList.length; i++) {
+                if (i === index) {
+                    aList[i].classList.add('active');
+                    secList = aList[index].dataset['cont'];
+                    document.querySelector('#' + secList).style.display = 'block';
+                }
+                aList[i].addEventListener('click', function () {
+                    for (var i = 0; i < aList.length; i++) {
+                        document.querySelector('nav>a.active').classList.remove('active');
+                        this.classList.add('active');
+                        document.querySelector('#' + secList).style.display = 'none';
+                        secList = this.dataset['cont'];
+                        document.querySelector('#' + secList).style.display = 'block';
+                    }
+                })
+            }
+        })(1)
+    })
+</script>
+
+</html>

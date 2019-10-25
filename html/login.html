@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东-欢迎登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../images/jd.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 登录头部分 -->
+    <div id='login-top'>
+        <div class='top-dog'>
+            <a href='jd.html'><img src="../images/login-top.jpg" alt=""></a>
+        </div>
+        <span id='welcome'>欢迎登陆</span>
+        <span><a href="javascript:;">登录页面，调查问卷</a></span>
+    </div>
+    <!-- 提示部分 -->
+    <div id='tips'>
+        <span>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<a href="javascript:;">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</span>
+    </div>
+    <!-- 登录表单部分 -->
+    <div id='login-bg'>
+        <div class='login-img'>
+            <img src="../images/login-bg.png" alt="">
+            <div class='login-form'>
+                <div class="form-top">
+                    <span>京东不会以任何理由要求您转账汇款，谨防诈骗。</span>
+                </div>
+                <div class="form-bg">
+                    <div class="bottom">
+                        <span><a href=''>扫码登录</a></span>
+                        <i class='i'>|</i>
+                        <span class='active'>账户登录</span>
+                    </div>
+                    <form class='form' action="../php/login.php" method="get">
+                        <label for="id"><img src='../images/id.jpg'><input id='user' type="text" name='user'
+                                placeholder="邮箱/用户名/登录手机"></label>
+                        <label for="pwd"><img src="../images/pwd.jpg"><input id='pwd' type="text" name='pwd'
+                                placeholder="密码"></label>
+                        <strong class='forget'><a href=''>忘记密码</a></strong>
+                        <button id='login-btn'>登录</button>
+                    </form>
+                    <div class='top'>
+                        <ul class='left'>
+                            <li><a href="">QQ</a></li>
+                            <li>|</li>
+                            <li><a href="">微信</a></li>
+
+                        </ul>
+                        <ul class='right'>
+                            <li><a href="">立即注册</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- 登录底部分 -->
+    <div id='loging-foot'>
+        <ul>
+            <li><a href="javascript:;">关于我们</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">联系我们</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">人才招聘</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">商家入驻</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">广告服务</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">手机京东</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">友情链接</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">销售联盟</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">京东社区</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">京东公益</a></li>
+            <li>|</li>
+            <li><a href="javascript:;">English Site</a></li>
+        </ul>
+        <span>Copyright © 2004-2019 京东JD.com 版权所有</span>
+    </div>
+    <!-- 音频信息 -->
+    <audio id="music" controls=”controls“ autoplay="autoplay" loop="loop">
+        <source src="../panDeng.mp3" type="audio/mpeg">
+        <!-- <source src="../heyOh.mp3" type="audio/mpeg"> -->
+        您的浏览器不支持 audio 元素。
+    </audio>
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../js/jd.js"></script>
+
+</html>

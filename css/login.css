@@ -1,0 +1,244 @@
+/* 公用样式 */
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+li,
+p,
+span,
+img,
+a,
+del,
+strong,
+i,
+input,
+body {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+
+/* 登录页面头部 */
+#login-top {
+	width: 992px;
+	height: 75px;
+	margin: 0 auto;
+	/* border: 1px solid red; */
+}
+#login-top #welcome {
+	font-size: 24px;
+	color: #2d2d2d;
+	margin-right: 550px;
+}
+#login-top img {
+	vertical-align: bottom;
+}
+.top-dog {
+	margin: 10px 20px 0 0;
+	display: inline-block;
+}
+#login-top a {
+	color: #acacaf;
+	font-size: 12px;
+}
+#login-top a:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+/* 提示部分 */
+#tips {
+	width: 100%;
+	height: 40px;
+	background: #fef8f0;
+	text-align: center;
+	line-height: 40px;
+	font-size: 12px;
+	color: #9a9ab3;
+}
+#tips a {
+	color: black;
+}
+#tips a:hover {
+	text-decoration: underline;
+}
+
+/* 登录表单部分 */
+#login-bg {
+	width: 100%;
+	height: 476px;
+	background: #2144a3;
+	display: flex;
+	box-sizing: border-box;
+}
+#login-bg .login-img {
+	width: 992px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+#login-bg .login-form {
+	width: 346px;
+	height: 428px;
+	/* border: 1px solid yellow; */
+	box-sizing: border-box;
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+.form-top {
+	width: 100%;
+	height: 40px;
+	background: #fef8f0;
+	/* border: 1px solid red; */
+	box-sizing: border-box;
+	font-size: 12px;
+	color: #9a9ab3;
+	text-align: center;
+	line-height: 40px;
+}
+.form-bg {
+	background: #fff;
+	height: 388px;
+}
+.form-bg span {
+	display: inline-block;
+	padding: 20px 45px;
+	font-size: 18px;
+	cursor: pointer;
+	font-weight: 900;
+}
+.form-bg span a {
+	color: #505057;
+}
+.form-bg span a:hover {
+	color: #de2e41;
+}
+.form-bg span.active {
+	color: #de2e41;
+}
+.i {
+	font-style: normal;
+	color: #e8e8f8;
+}
+.bottom {
+	border-bottom: 1px solid #f4f4f4;
+}
+.form {
+	margin: 20px 0 0 20px;
+	border-bottom: 1px solid #f4f4f4;
+}
+.form img {
+	vertical-align: bottom;
+}
+/* #login-bg .form span {
+	font-size: 12px;
+	color: #9a9ab3;
+	display: block;
+	margin-left: 255px;
+} */
+#login-bg .forget {
+	font-style: normal;
+	display: block;
+	margin: 25px 0 25px 260px;
+}
+.forget a {
+	font-size: 12px;
+	color: #9a9ab3;
+}
+.forget a:hover {
+	text-decoration: underline;
+	color: #de2e41;
+}
+.form input {
+	width: 268px;
+	height: 40px;
+	margin-top: 20px;
+	outline: none;
+	box-sizing: border-box;
+	text-indent: 1em;
+	font-size: 15px;
+	color: #9a9ab3;
+}
+#login-btn {
+	width: 308px;
+	height: 35px;
+	background: #de2e41;
+	outline: none;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 20px;
+	border-radius: 5px;
+}
+.top {
+	border-top: 1px solid #f4f4f4;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.top ul {
+	display: flex;
+	margin-top: 10px;
+}
+.top ul li {
+	list-style: none;
+	margin-left: 15px;
+	color: #9a9ab3;
+}
+.top .left a {
+	font-size: 12px;
+	color: #000;
+}
+.left {
+	margin-left: 20px;
+}
+.left a:hover {
+	color: #de2e41;
+	text-decoration: underline;
+}
+.right {
+	margin-right: 20px;
+}
+.right a {
+	color: #de2e41;
+	font-size: 14px;
+}
+.right a:hover {
+	text-decoration: underline;
+}
+
+/* 登录底部分 */
+#loging-foot {
+	width: 992px;
+	/* border: 1px solid green; */
+	margin: 25px auto;
+	text-align: center;
+}
+#loging-foot ul {
+	display: flex;
+	margin: 10px 0 5px 0;
+	/* justify-content: space-evenly; */
+}
+#loging-foot ul li {
+	list-style: none;
+	margin-left: 18px;
+	font-size: 12px;
+	color: #66666a;
+}
+#loging-foot ul li a:hover {
+	text-decoration: underline;
+	color: red;
+}
+#loging-foot span,
+#loging-foot ul li a {
+	font-size: 12px;
+	color: #66666a;
+}
